@@ -42,4 +42,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(Phone::class);
     }
+
+    public function jobs()
+    {
+        return $this->hasMany('App\Job', 'client_id');
+    }
 }
