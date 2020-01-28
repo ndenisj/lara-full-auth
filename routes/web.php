@@ -15,6 +15,9 @@
 //     return view('welcome');
 // });
 
+Route::get('/jobs', 'JobController@index');
+Route::get('/jobs/{job}', 'JobController@show')->name('jobs.show');
+
 Route::get('/', 'QuoteController@index');
 Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');
 
