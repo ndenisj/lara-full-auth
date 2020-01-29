@@ -30,3 +30,7 @@ Route::get('/changepassword', 'ProfileController@changepassword')->name('changep
 Route::post('/changepassword', 'ProfileController@changePwd')->name('changePwd');
 Route::get('/profilepicture', 'ProfileController@profileAvatar')->name('profileavatar');
 Route::post('/profilepictureupload', 'ProfileController@profilePictureUpload')->name('profilepictureupload');
+
+
+// RESTFULL CONTROLLERS
+Route::resource('dashboard', 'DashboardController');
